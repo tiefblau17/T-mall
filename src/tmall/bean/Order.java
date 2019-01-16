@@ -1,16 +1,9 @@
-/**
-* 模仿天猫整站j2ee 教程 为how2j.cn 版权所有
-* 本教程仅用于学习使用，切勿用于非法用途，由此引起一切后果与本站无关
-* 供购买者学习，请勿私自传播，否则自行承担相关法律责任
-*/	
-
 package tmall.bean;
 
 import java.util.Date;
+
 import java.util.List;
 //import tmall.dao.OrderDAO;
-
-import tmall.dao.OrderDAO;
 
 public class Order {
 	private String orderCode;
@@ -34,26 +27,26 @@ public class Order {
 	public String getStatusDesc(){
 		String desc ="未知";
 		switch(status){
-			case OrderDAO.waitPay:
-				desc="待付款";
-				break;
-			case OrderDAO.waitDelivery:
-				desc="待发货";
-				break;
-			case OrderDAO.waitConfirm:
-				desc="待收货";
-				break;
-			case OrderDAO.waitReview:
-				desc="等评价";
-				break;
-			case OrderDAO.finish:
-				desc="完成";
-				break;
-			case OrderDAO.delete:
-				desc="刪除";
-				break;
-			default:
-				desc="未知";
+//			case OrderDAO.waitPay:
+//				desc="待付款";
+//				break;
+//			case OrderDAO.waitDelivery:
+//				desc="待发货";
+//				break;
+//			case OrderDAO.waitConfirm:
+//				desc="待收货";
+//				break;
+//			case OrderDAO.waitReview:
+//				desc="等评价";
+//				break;
+//			case OrderDAO.finish:
+//				desc="完成";
+//				break;
+//			case OrderDAO.delete:
+//				desc="刪除";
+//				break;
+//			default:
+//				desc="未知";
 		}
 		return desc;
 	}
@@ -174,9 +167,3 @@ public class Order {
 	}
 	
 }
-
-/**
-* 模仿天猫整站j2ee 教程 为how2j.cn 版权所有
-* 本教程仅用于学习使用，切勿用于非法用途，由此引起一切后果与本站无关
-* 供购买者学习，请勿私自传播，否则自行承担相关法律责任
-*/	

@@ -1,9 +1,3 @@
-/**
-* 模仿天猫整站j2ee 教程 为how2j.cn 版权所有
-* 本教程仅用于学习使用，切勿用于非法用途，由此引起一切后果与本站无关
-* 供购买者学习，请勿私自传播，否则自行承担相关法律责任
-*/	
-
 package tmall.servlet;
 
 
@@ -76,6 +70,7 @@ public abstract class BaseBackServlet extends HttpServlet {
 			String redirect = m.invoke(this,request, response,page).toString();
 			
 			/*根据方法的返回值，进行相应的客户端跳转，服务端跳转，或者仅仅是输出字符串*/
+			
 			if(redirect.startsWith("@"))
 				response.sendRedirect(redirect.substring(1));
 			else if(redirect.startsWith("%"))
@@ -124,9 +119,3 @@ public abstract class BaseBackServlet extends HttpServlet {
 	
 
 }
-
-/**
-* 模仿天猫整站j2ee 教程 为how2j.cn 版权所有
-* 本教程仅用于学习使用，切勿用于非法用途，由此引起一切后果与本站无关
-* 供购买者学习，请勿私自传播，否则自行承担相关法律责任
-*/	
